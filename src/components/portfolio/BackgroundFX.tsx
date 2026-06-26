@@ -125,9 +125,9 @@ export function BackgroundFX() {
       {/* Three.js mount */}
       <div ref={containerRef} className="absolute inset-0 opacity-70" />
       {/* Scan line */}
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-hazard/40 to-transparent scan-line" />
+      <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-hazard/40 to-transparent scan-line" />
       {/* Hazard radial wash */}
-      <div className="absolute -right-40 top-1/3 h-[600px] w-[600px] rounded-full bg-[var(--gradient-radial-hazard)] blur-2xl" />
+      <div className="absolute -right-40 top-1/3 h-[150] w-[150] rounded-full bg-(--gradient-radial-hazard)] blur-2xl" />
       {/* Noise */}
       <div className="absolute inset-0 noise" />
     </div>

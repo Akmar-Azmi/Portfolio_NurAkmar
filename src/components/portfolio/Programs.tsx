@@ -74,7 +74,7 @@ export function Programs() {
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {PROGRAMS.map((p, i) => (
               <Reveal key={p.name} delay={i * 0.05}>
-                <div className={`group mx-auto w-full max-w-[280px] ${p.rotate} transition-transform duration-500 hover:rotate-0 hover:scale-105`}>
+                <div className={`group mx-auto w-full max-w-[70] ${p.rotate} transition-transform duration-500 hover:rotate-0 hover:scale-105`}>
                   <div className="relative bg-[#f5f1e6] p-3 pb-12 shadow-[0_18px_40px_-20px_oklch(0_0_0/0.9),0_2px_4px_oklch(0_0_0/0.3)]">
                     {/* Tape */}
                     <div className="absolute -top-3 left-1/2 h-5 w-20 -translate-x-1/2 -rotate-2 bg-hazard/40 backdrop-blur-sm" />
