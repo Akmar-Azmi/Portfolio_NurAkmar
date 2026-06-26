@@ -19,7 +19,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Most Wanted dossier of Nur Akmar Noor Azmi — Agentic AI, automation, and full-stack engineering.",
+          "Most Wanted dossier of Nur Akmar Binti Noor Azmi — Agentic AI, automation, and full-stack engineering.",
       },
       { property: "og:title", content: "Nur Akmar — AI Engineer & Software Developer" },
       {

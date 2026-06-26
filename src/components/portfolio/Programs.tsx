@@ -5,13 +5,15 @@ import { Camera } from "lucide-react";
 const PROGRAMS = [
   {
     name: "12th ie-RIICH",
+    image: "src/components/images/ieriich.jpg",
     year: "2026",
     place: "UPSI",
-    body: "International Exhibition of Research, Ideas & Innovation. Earned Gold for MediBond.",
+    body: "International Exhibition of Research, Ideas & Innovation. Earned \"Gold Award\" for MediBond.",
     rotate: "-rotate-3",
   },
   {
     name: "UX Bootcamp",
+    image: "src/components/images/kyouth.jpg",
     year: "2025",
     place: "K-Youth · UPSI",
     body: "User Experience Bootcamp under the K-Youth Development Programme Track B.",
@@ -19,20 +21,23 @@ const PROGRAMS = [
   },
   {
     name: "MDEC GOT",
+    image: "src/components/images/mdec.jpg",
     year: "2025",
     place: "MOHE × MDEC",
     body: "Digital Freelancing in Web Design & IT — Global Outsourcing Talent track.",
     rotate: "-rotate-2",
   },
   {
-    name: "AI for MY Future",
-    year: "2025",
-    place: "Microsoft",
-    body: "Microsoft's national AI literacy + applied AI programme for students.",
+    name: " OpenClaw for Web3 Workshop",
+    image: "src/components/images/openclaw.jpg",
+    year: "2026",
+    place: "APU / APIIT",
+    body: "Setting up OpenClaw using DigitalOcean, configuring SSH keys, creating a telegram bot and integrating Gemini as LLM backend. ",
     rotate: "rotate-3",
   },
   {
     name: "T.U.B Spark",
+    image: "src/components/images/unity.jpg",
     year: "2025",
     place: "Unity · UPSI",
     body: "Unity bootcamp covering interactive 3D and game-engine fundamentals.",
@@ -40,6 +45,7 @@ const PROGRAMS = [
   },
   {
     name: "CCAIIC",
+    image: "src/components/images/codecraft.jpg",
     year: "2024",
     place: "TARUMT",
     body: "CodeCraft AI Integration Challenge — collegiate AI-build hackathon.",
@@ -76,14 +82,13 @@ export function Programs() {
                     {/* "Photo" */}
                     <div className="relative aspect-square w-full overflow-hidden bg-[radial-gradient(circle_at_30%_30%,oklch(0.3_0_0),oklch(0.1_0_0))]">
                       <div className="grid-bg absolute inset-0 opacity-40" />
-                      <div className="absolute inset-0 grid place-items-center">
-                        <div className="flex flex-col items-center gap-2 text-center">
-                          <Camera className="h-8 w-8 text-hazard/60" />
-                          <span className="font-mono text-[9px] uppercase tracking-widest text-muted-foreground">
-                            [ photo pending ]
-                          </span>
-                        </div>
-                      </div>
+                      <img
+                        src={p.image}
+                        alt={p.name}
+                        className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+
+                      <div className="absolute inset-0 bg-black/20" />
                       <div className="absolute right-2 top-2 border border-hazard/60 bg-background/80 px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-widest text-hazard">
                         {p.year}
                       </div>

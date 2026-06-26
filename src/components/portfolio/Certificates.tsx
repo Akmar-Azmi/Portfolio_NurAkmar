@@ -1,16 +1,16 @@
 import { SectionHeader } from "./SectionHeader";
 import { Reveal } from "./Reveal";
-import { Award } from "lucide-react";
+import { Award, FileText, ExternalLink } from "lucide-react";
 
 const CERTS = [
-  { name: "Start Writing Prompts like a Pro", org: "Google", year: "2026" },
-  { name: "User Experience Bootcamp", org: "K-Youth · UPSI", year: "2025" },
-  { name: "Digital Freelancing in Web Design & IT", org: "MOHE-MDEC GOT Malaysia", year: "2025" },
-  { name: "Python Programming Fundamentals", org: "Data Science Association", year: "2025" },
-  { name: "AI for MY Future", org: "Microsoft", year: "2025" },
-  { name: "AI for Beginners", org: "RDC Tanjong Malim", year: "2025" },
-  { name: "T.U.B Spark Unity Bootcamp", org: "UPSI", year: "2025" },
-  { name: "CodeCraft AI Integration Challenge", org: "TARUMT", year: "2024" },
+  { name: "Start Writing Prompts like a Pro", pdf: "public/prompt.pdf", org: "Google | Coursera", year: "2026" },
+  { name: "The 12th International Exhibition of Research, Ideas, & Innovation on Creativity and Humanizing (12th ie-RIICH 2026)", pdf: "public/0008_NUR_AKMAR_BINTI_NOOR_AZMI_gold.pdf", org: "Gold Award | UPSI", year: "2026" },
+  { name: "User Experience Bootcamp",  pdf: "public/Nur Akmar Binti Noor Azmi _ User Experience Bootcamp.pdf", org: "K-Youth · UPSI", year: "2025" },
+  { name: "Digital Freelancing in Web Design & IT", pdf: "public/HVG006453_NUR_AKMAR_BINTI_NOOR_AZMI.pdf", org: "MOHE-MDEC GOT Malaysia", year: "2025" },
+  { name: "Python Programming Fundamentals", pdf: "public/Python Programming Fundamentalst.pdf", org: "Data Science Association", year: "2025" },
+  { name: "AI for MY Future", pdf: "public/AI For MY Future.pdf", org: "Microsoft", year: "2025" },
+  { name: "T.U.B Spark Unity Bootcamp", pdf: "public/T.U.B Spark Unity Bootcamp.pdf", org: "UPSI", year: "2025" },
+  { name: "CodeCraft AI Integration Challenge", pdf: "public/CodeCraft AI Integration Challenge (CCAIIC).pdf", org: "TARUMT", year: "2024" },
 ];
 
 export function Certificates() {
@@ -39,7 +39,16 @@ export function Certificates() {
                   {c.name}
                 </h3>
                 <p className="font-mono text-[11px] text-muted-foreground">{c.org}</p>
-
+                <a
+                  href={c.pdf}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-flex w-full items-center justify-center gap-2 border border-hazard bg-hazard/10 px-3 py-2 font-mono text-[10px] uppercase tracking-widest text-hazard transition-all hover:bg-hazard hover:text-primary-foreground"
+                >
+                  <FileText className="h-4 w-4" />
+                  View Certificate
+                  <ExternalLink className="h-3 w-3" />
+                </a>
                 <div className="mt-4 flex items-center justify-between border-t border-border pt-3 font-mono text-[9px] uppercase tracking-widest text-muted-foreground/70">
                   <span>STAMPED</span>
                   <span className="text-hazard/70">✓ VERIFIED</span>

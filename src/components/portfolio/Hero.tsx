@@ -26,7 +26,7 @@ export function Hero() {
 
           <Reveal delay={0.1}>
             <h1 className="font-display text-5xl font-bold uppercase leading-[0.95] tracking-tight text-foreground sm:text-6xl md:text-7xl">
-              NUR AKMAR
+              NUR AKMAR 
               <br />
               <span className="text-glow-hazard text-hazard">NOOR AZMI</span>
             </h1>
@@ -43,9 +43,15 @@ export function Hero() {
           <Reveal delay={0.3}>
             <p className="mt-6 max-w-lg text-base leading-relaxed text-muted-foreground">
               Final-year Software Engineering student building{" "}
-              <span className="text-foreground">Agentic AI</span> systems, data pipelines, and
-              full-stack apps. Currently weaponising n8n + LLMs at Telekom Malaysia to make
-              ETL monitoring autonomous.
+              <span className="text-foreground">
+                full-stack applications, workflow automation, and AI-powered solutions
+              </span>
+              . Currently developing an{" "}
+              <span className="text-foreground">Agentic AI</span> workflow using{" "}
+              <span className="text-foreground">n8n</span> and{" "}
+              <span className="text-foreground">Azure AI</span> at{" "}
+              <span className="text-foreground">Telekom Malaysia</span> to automate ETL
+              monitoring and recovery.
             </p>
           </Reveal>
 
@@ -65,7 +71,7 @@ export function Hero() {
                 className="inline-flex items-center gap-2 border border-border bg-surface/60 px-6 py-3 font-mono text-xs font-bold uppercase tracking-widest text-foreground transition-all hover:border-hazard hover:text-hazard"
               >
                 <Download className="h-4 w-4" />
-                Download Dossier
+                Download Resume
               </a>
               <a
                 href="#contact"
@@ -81,9 +87,9 @@ export function Hero() {
           <Reveal delay={0.5}>
             <div className="mt-10 grid grid-cols-3 gap-px overflow-hidden border border-border bg-border">
               {[
-                { k: "CGPA", v: "3.76" },
-                { k: "DEAN LIST", v: "7×" },
-                { k: "INTERN", v: "TM" },
+                { k: "EXPERIENCE", v: "FULL-STACK DEVELOPER INTERN" },
+                { k: "FOCUS", v: "Agentic AI & Workflow Automation" },
+                { k: "INTERN", v: "TELEKOM MALAYSIA" },
               ].map((s) => (
                 <div key={s.k} className="concrete-tex p-4">
                   <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
@@ -99,7 +105,7 @@ export function Hero() {
         {/* Right: Wanted card */}
         <div className="relative flex items-center justify-center">
           <Reveal delay={0.2}>
-            <div className="dossier-corners concrete-tex relative w-full max-w-md overflow-hidden border border-hazard/30 p-5 shadow-2xl">
+            <div className="dossier-corners concrete-tex relative w-full max-w-[520px] overflow-hidden border border-hazard/30 p-5 shadow-2xl">
               <span className="corner-tl" />
               <span className="corner-tr" />
               <span className="corner-bl" />
@@ -108,7 +114,7 @@ export function Hero() {
               {/* Header bar */}
               <div className="hazard-stripes mb-4 h-2 w-full opacity-80" />
               <div className="mb-3 flex items-center justify-between font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-                <span className="flex items-center gap-1.5"><Crosshair className="h-3 w-3 text-hazard" /> DOSSIER #NA-2026</span>
+                <span className="flex items-center gap-1.5"><Crosshair className="h-3 w-3 text-hazard" /> SUBJECT #NA-2026</span>
                 <span className="flicker text-hazard">● REC</span>
               </div>
 
@@ -117,20 +123,15 @@ export function Hero() {
                 {/* Rotating search light */}
                 <div className="pointer-events-none absolute left-1/2 top-0 h-[140%] w-[60%] -translate-x-1/2 search-light bg-gradient-to-b from-hazard/30 via-hazard/10 to-transparent blur-xl" />
 
-                {/* Placeholder portrait */}
-                <div className="absolute inset-0 grid place-items-center bg-[radial-gradient(circle_at_center,oklch(0.22_0_0),oklch(0.1_0_0))]">
-                  <div className="flex flex-col items-center gap-2 text-center">
-                    <div className="grid h-24 w-24 place-items-center rounded-full border-2 border-dashed border-hazard/50 font-display text-3xl font-bold text-hazard">
-                      NA
-                    </div>
-                    <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-                      [ photo pending ]
-                    </div>
-                    <div className="font-mono text-[9px] uppercase tracking-widest text-muted-foreground/60">
-                      // TODO: insert subject portrait
-                    </div>
-                  </div>
-                </div>
+                {/* Portrait */}
+                <img
+                  src="src/components/images/profile.jpg"
+                  alt="Nur Akmar"
+                  className="absolute inset-0 h-full w-full object-cover grayscale brightness-90 contrast-110"
+                />
+
+                {/* Dark overlay */}
+                <div className="absolute inset-0 bg-black/20" />
 
                 {/* Crosshair */}
                 <div className="pointer-events-none absolute inset-0">
@@ -153,7 +154,7 @@ export function Hero() {
                   ["ROLE", "AI / Software Engineer"],
                   ["BASE", "Chemor, Perak — MY"],
                   ["STATUS", "Intern @ Telekom Malaysia"],
-                  ["THREAT", "Builds Agentic AI"],
+                  ["MISSION", "Builds Agentic AI"],
                 ].map(([k, v]) => (
                   <div key={k} className="flex items-baseline justify-between gap-3 border-b border-border/60 pb-1">
                     <dt className="uppercase tracking-widest text-muted-foreground">{k}</dt>
@@ -180,8 +181,8 @@ export function Hero() {
       </div>
 
       {/* Scroll hint */}
-      <div className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 font-mono text-[10px] uppercase tracking-widest text-muted-foreground md:flex">
-        <span>scroll dossier</span>
+      <div className="absolute bottom-0.5 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 font-mono text-[12px] uppercase tracking-widest text-muted-foreground md:flex">
+        <span>scroll Subject</span>
         <div className="h-8 w-px bg-gradient-to-b from-hazard to-transparent" />
       </div>
     </section>

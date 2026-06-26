@@ -1,55 +1,61 @@
 import { SectionHeader } from "./SectionHeader";
 import { Reveal } from "./Reveal";
 import { Github, ExternalLink, ImageIcon } from "lucide-react";
+import * as Dialog from "@radix-ui/react-dialog";
+import { X } from "lucide-react";
 
 const PROJECTS = [
   {
     code: "P-01",
-    name: "MediBond",
-    tag: "FYP · Gold Award ie-RIICH 2026",
+    name: "MediBond: A Digital Assistant for Elderly Medication Support With Caregiver Integration",
+    image: "src/components/images/medibond.png",
+    tag: "FYP • Gold Award • ie-RIICH 2026",
     description:
-      "Digital assistant for elderly medication support with caregiver integration. Role-based auth (Elder / Caregiver), real-time medication reminder scheduling, and push notification logic.",
+      "Award-winning Final Year Project (FYP) developed to improve medication adherence among elderly users through caregiver integration. Features role-based authentication, real-time medication reminders, push notifications, and remote caregiver monitoring.",
     problem:
-      "Elderly users miss doses and caregivers lack visibility — MediBond closes the loop with reminders, adherence tracking and remote oversight.",
-    stack: ["React Native (Expo)", "Supabase", "PostgreSQL", "Push Notifications"],
-    github: "#",
-    demo: "#",
+      "Elderly users often miss medication doses while caregivers have limited visibility into medication adherence. MediBond bridges this gap with intelligent reminders, adherence tracking, and remote monitoring.",
+    stack: [
+      "React Native (Expo)",
+      "Supabase",
+      "Firebase",
+      "PostgreSQL",
+      "Push Notifications",
+    ],
   },
   {
     code: "P-02",
-    name: "TM ETL Agent Dashboard",
+    name: "Night Agent DataOps (NADO)",
+      image: "src/components/images/Agentic.png",
     tag: "Telekom Malaysia · Internship",
     description:
       "Agentic AI workflow on n8n that monitors ETL pipelines, analyses execution logs with Azure OpenAI, and auto-reruns failed jobs. Paired with a Next.js dashboard for KPIs, history and AI-generated insights.",
     problem:
-      "DataOps engineers were manually triaging failed ETL jobs — the agent handles detection, root-cause hints and recovery, freeing humans for higher-order work.",
+      "DataOps engineers previously handled ETL failures manually. I developed an Agentic AI workflow that analyses execution logs, identifies potential causes, and provides recovery recommendations to reduce manual intervention. **Automatic rerun of failed ETL jobs is currently being implemented.",
     stack: ["n8n", "Azure OpenAI", "Next.js", "REST APIs"],
-    github: "#",
-    demo: "#",
   },
   {
     code: "P-03",
     name: "MySanding Bridal",
+    image: "src/components/images/mySanding.png",
     tag: "Real Client · Agile SCRUM",
     description:
       "Booking and service-management website for a bridal studio, built in an Agile SCRUM cadence with sprint planning, reviews and Jira-tracked defects.",
     problem:
       "Manual WhatsApp bookings caused double-bookings — the platform centralises packages, availability and customer requests.",
     stack: ["Laravel", "Supabase", "Cloudinary", "Jira"],
-    github: "#",
-    demo: "#",
+
   },
   {
     code: "P-04",
     name: "Recipedia",
+    image: "src/components/images/recipedia.jpg",
     tag: "Mobile · Community Recipes",
     description:
       "Cross-platform recipe app with CRUD for recipes, favourites, comments and likes — a small social layer for home cooks.",
     problem:
       "Cluttered recipe apps with poor UX — Recipedia keeps it focused: cook, save, share.",
     stack: ["Flutter", "Dart", "Firebase", "Cloudinary"],
-    github: "#",
-    demo: "#",
+
   },
 ];
 
@@ -59,7 +65,7 @@ export function Projects() {
       <div className="mx-auto max-w-7xl">
         <SectionHeader
           code="// 03 — CASE FILES"
-          title="Featured Projects"
+          title="Projects"
           subtitle="Selected operations. Tap a file for breakdown."
         />
 
@@ -74,26 +80,33 @@ export function Projects() {
 
                 {/* Preview placeholder */}
                 <div className="relative aspect-video w-full overflow-hidden border-b border-border bg-[radial-gradient(circle_at_30%_20%,oklch(0.22_0_0),oklch(0.1_0_0))]">
-                  <div className="grid-bg absolute inset-0 opacity-50" />
-                  <div className="absolute inset-0 grid place-items-center">
-                    <div className="flex flex-col items-center gap-2 text-center">
-                      <ImageIcon className="h-10 w-10 text-hazard/50" />
-                      <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-                        [ preview pending ]
-                      </span>
-                      <span className="font-mono text-[9px] uppercase tracking-widest text-muted-foreground/60">
-                        // TODO: attach screenshot
-                      </span>
-                    </div>
-                  </div>
-                  <div className="absolute left-3 top-3 border border-hazard bg-background/80 px-2 py-1 font-mono text-[10px] uppercase tracking-widest text-hazard backdrop-blur">
-                    {p.code}
-                  </div>
-                  <div className="absolute right-3 top-3 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-                    {p.tag}
-                  </div>
-                  {/* Scan */}
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-hazard/5 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <Dialog.Root>
+  <Dialog.Trigger asChild>
+    <img
+      src={p.image}
+      alt={p.name}
+      className="absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 cursor-zoom-in object-contain transition-transform duration-300 hover:scale-105"
+    />
+  </Dialog.Trigger>
+
+  <Dialog.Portal>
+    <Dialog.Overlay className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm" />
+
+    <Dialog.Content className="fixed left-1/2 top-1/2 z-50 w-[90vw] max-w-6xl -translate-x-1/2 -translate-y-1/2 outline-none">
+
+      <img
+        src={p.image}
+        alt={p.name}
+        className="max-h-[90vh] w-full object-contain rounded-lg"
+      />
+
+      <Dialog.Close className="absolute right-4 top-4 rounded-full bg-black/60 p-2 text-white hover:bg-black">
+        <X className="h-5 w-5" />
+      </Dialog.Close>
+
+    </Dialog.Content>
+  </Dialog.Portal>
+</Dialog.Root>
                 </div>
 
                 {/* Body */}
@@ -119,23 +132,6 @@ export function Projects() {
                         {s}
                       </span>
                     ))}
-                  </div>
-
-                  <div className="mt-auto flex items-center gap-2 pt-3">
-                    <a
-                      href={p.github}
-                      className="inline-flex items-center gap-1.5 border border-border px-3 py-1.5 font-mono text-[10px] uppercase tracking-widest text-muted-foreground transition-all hover:border-hazard hover:text-hazard"
-                    >
-                      <Github className="h-3.5 w-3.5" />
-                      GitHub
-                    </a>
-                    <a
-                      href={p.demo}
-                      className="inline-flex items-center gap-1.5 border border-hazard bg-hazard/10 px-3 py-1.5 font-mono text-[10px] uppercase tracking-widest text-hazard transition-all hover:bg-hazard hover:text-primary-foreground"
-                    >
-                      <ExternalLink className="h-3.5 w-3.5" />
-                      Live Demo
-                    </a>
                   </div>
                 </div>
               </article>

@@ -7,25 +7,25 @@ const CARDS = [
     icon: Target,
     code: "01",
     title: "Introduction",
-    body: "Final-year Software Engineering student at UPSI, graduating Nov 2026. CGPA 3.76 with Dean's List across all 7 semesters. Currently a Full-Stack Developer Intern at Telekom Malaysia building Agentic AI for DataOps.",
+    body: "Final-year Software Engineering student at Universiti Pendidikan Sultan Idris (UPSI), graduating in November 2026 with a CGPA of 3.76 and Dean's List recognition every semester. Currently working as a Full-Stack Developer Intern at Telekom Malaysia, building AI-powered solutions to automate enterprise DataOps workflows.",
   },
   {
     icon: Compass,
     code: "02",
-    title: "Career Goal",
-    body: "To ship intelligent systems where AI agents, automation, and clean engineering meet — turning manual ops work into autonomous workflows that scale.",
+    title: "Career Objective",
+    body: "Aspiring AI Engineer and Software Engineer passionate about designing intelligent software that combines automation, artificial intelligence, and scalable full-stack development to solve real-world business challenges.",
   },
   {
     icon: Flame,
     code: "03",
-    title: "Passion",
-    body: "Building things that feel alive: agentic workflows, LLM tooling, real-time mobile apps, and full-stack platforms that solve real problems for real people.",
+    title: "Experience",
+    body: "Experienced in developing full-stack web and mobile applications, integrating AI agents into enterprise workflows, and collaborating with industry engineers using Agile methodologies. Hands-on with React, Flutter, Next.js, Laravel, n8n, Azure OpenAI, and modern cloud technologies.",
   },
   {
     icon: Brain,
     code: "04",
-    title: "Interests",
-    body: "Agentic AI · n8n automation · Retrieval-Augmented Generation · Mobile dev (Flutter / React Native) · Data engineering · UX for technical tools.",
+    title: "Expertise",
+    body: "Artificial Intelligence • Agentic AI • Workflow Automation • Full-Stack Development • Mobile Development • REST APIs • Software Testing • UI/UX • Agile SCRUM",
   },
 ];
 
@@ -34,8 +34,8 @@ export function About() {
     <section id="about" className="relative px-4 py-24">
       <div className="mx-auto max-w-7xl">
         <SectionHeader
-          code="// 01 — DOSSIER"
-          title="Profile Dossier"
+          code="// 01 — AKMAR AZMI"
+          title="Profile AKMAR"
           subtitle="Classified background on the subject. Cross-reference with attached resume for full chain of custody."
         />
 
@@ -63,10 +63,14 @@ export function About() {
                 </div>
 
                 <p className="text-sm leading-relaxed text-muted-foreground">{c.body}</p>
-
                 <div className="mt-5 flex items-center justify-between font-mono text-[9px] uppercase tracking-widest text-muted-foreground/60">
                   <span>CLASSIFIED // L2</span>
-                  <span className="text-hazard/60">VERIFIED ✓</span>
+
+                  <div className="rotate-[-8deg] border-2 border-hazard bg-hazard/5 px-3 py-1 shadow-[0_0_10px_rgba(255,215,0,0.25)]">
+                    <span className="font-display text-[10px] font-bold tracking-[0.3em] text-hazard">
+                      VERIFIED
+                    </span>
+                  </div>
                 </div>
               </article>
             </Reveal>

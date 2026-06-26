@@ -27,16 +27,6 @@ const ENTRIES = [
       "Performed functional testing, UI/UX validation and cross-device responsiveness checks before handover.",
     ],
   },
-  {
-    range: "OCT 2022 — NOV 2026",
-    role: "B.Sc. Software Engineering (Hons.)",
-    org: "Universiti Pendidikan Sultan Idris (UPSI)",
-    icon: GraduationCap,
-    bullets: [
-      "CGPA 3.76 — Dean's List from Semester 1 through Semester 7.",
-      "Final Year Project: MediBond — Gold Award, 12th ie-RIICH International Exhibition (2026).",
-    ],
-  },
 ];
 
 export function Timeline() {
@@ -44,7 +34,7 @@ export function Timeline() {
     <section id="experience" className="relative px-4 py-24">
       <div className="mx-auto max-w-7xl">
         <SectionHeader
-          code="// 02 — TIMELINE"
+          code="// 02 — WORK EXPERIENCE"
           title="Mission Log"
           subtitle="Chronological record of engagements, deployments and academic clearances."
         />

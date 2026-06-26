@@ -1,7 +1,11 @@
-import { useState } from "react";
 import { SectionHeader } from "./SectionHeader";
 import { Reveal } from "./Reveal";
-import { Mail, Linkedin, Github, MapPin, Send } from "lucide-react";
+import {
+  Mail,
+  Linkedin,
+  Phone,
+  FileText,
+} from "lucide-react";
 
 const CHANNELS = [
   {
@@ -17,155 +21,89 @@ const CHANNELS = [
     href: "https://www.linkedin.com/in/akmar-azmi217544183",
   },
   {
-    icon: Github,
-    label: "GitHub",
-    value: "// TODO: add handle",
-    href: "#",
+    icon: Phone,
+    label: "Phone",
+    value: "+60 17-544 2183", // Change to your actual phone number
+    href: "tel:+60175442183",
   },
   {
-    icon: MapPin,
-    label: "Location",
-    value: "Chemor, Perak — MY",
-    href: "#",
+    icon: FileText,
+    label: "Resume",
+    value: "View Resume",
+    href: "/public/NurAkmar_resume.pdf", // Change filename if needed
   },
 ];
 
 export function Contact() {
-  const [sent, setSent] = useState(false);
-
   return (
     <section id="contact" className="relative px-4 py-24">
       <div className="mx-auto max-w-7xl">
         <SectionHeader
           code="// 07 — TRANSMISSION"
           title="Open Channel"
-          subtitle="Send a signal. Encrypted by default — typically replies within 24h."
+          subtitle="Let's connect. Feel free to reach out through any of the channels below."
         />
 
-        <div className="grid gap-6 lg:grid-cols-[1fr_1.2fr]">
-          {/* Channels + radar */}
+        <div className="mx-auto max-w-6xl">
           <Reveal>
-            <div className="dossier-corners relative h-full overflow-hidden border border-border bg-surface/60 p-6 backdrop-blur-sm">
+            <div className="dossier-corners relative overflow-hidden border border-border bg-surface/60 p-8 backdrop-blur-sm">
               <span className="corner-tl" />
               <span className="corner-tr" />
               <span className="corner-bl" />
               <span className="corner-br" />
 
-              <div className="mb-5 font-mono text-[10px] uppercase tracking-widest text-hazard">
+              <div className="mb-8 font-mono text-[10px] uppercase tracking-widest text-hazard">
                 ⟶ DIRECT CHANNELS
               </div>
 
-              <ul className="space-y-3">
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 {CHANNELS.map((c) => (
-                  <li key={c.label}>
-                    <a
-                      href={c.href}
-                      className="group flex items-center gap-4 border border-border bg-background/40 p-3 transition-all hover:border-hazard hover:bg-background"
+                  <a
+                    key={c.label}
+                    href={c.href}
+                    target={
+                      c.href.startsWith("http") || c.href.endsWith(".pdf")
+                        ? "_blank"
+                        : undefined
+                    }
+                    rel={
+                      c.href.startsWith("http") || c.href.endsWith(".pdf")
+                        ? "noopener noreferrer"
+                        : undefined
+                    }
+                    className="group flex items-center gap-4 border border-border bg-background/40 p-4 transition-all duration-300 hover:-translate-y-1 hover:border-hazard hover:bg-background"
+                  >
+                    <div
+                      className={`grid h-12 w-12 place-items-center border transition-all duration-300
+                        ${
+                          c.label === "Resume"
+                            ? "border-hazard bg-hazard text-black"
+                            : "border-hazard/40 bg-hazard/5 text-hazard group-hover:border-hazard"
+                        }`}
                     >
-                      <div className="grid h-10 w-10 place-items-center border border-hazard/40 bg-hazard/5 text-hazard transition-all group-hover:border-hazard group-hover:glow-hazard">
-                        <c.icon className="h-4 w-4" />
-                      </div>
-                      <div className="min-w-0 flex-1">
-                        <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-                          {c.label}
-                        </div>
-                        <div className="truncate font-mono text-sm text-foreground">{c.value}</div>
-                      </div>
-                      <span className="font-mono text-xs text-hazard opacity-0 transition-opacity group-hover:opacity-100">
-                        ⟶
-                      </span>
-                    </a>
-                  </li>
-                ))}
-              </ul>
+                      <c.icon className="h-5 w-5" />
+                    </div>
 
-              {/* Radar */}
-              <div className="relative mx-auto mt-8 aspect-square w-full max-w-[260px]">
-                <div className="absolute inset-0 rounded-full border border-hazard/30" />
-                <div className="absolute inset-[12%] rounded-full border border-hazard/20" />
-                <div className="absolute inset-[28%] rounded-full border border-hazard/15" />
-                <div className="absolute inset-[44%] rounded-full border border-hazard/10" />
-                <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-hazard/20" />
-                <div className="absolute left-0 top-1/2 h-px w-full -translate-y-1/2 bg-hazard/20" />
-                <div
-                  className="absolute left-1/2 top-1/2 h-1/2 w-px origin-top -translate-x-1/2 radar-sweep"
-                  style={{ background: "linear-gradient(to bottom, var(--hazard), transparent)" }}
-                />
-                <div className="absolute left-1/2 top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-hazard glow-hazard" />
+                    <div className="min-w-0">
+                      <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+                        {c.label}
+                      </div>
+
+                      <div className="truncate font-mono text-sm text-foreground transition-colors group-hover:text-hazard">
+                        {c.value}
+                      </div>
+                    </div>
+                  </a>
+                ))}
               </div>
-              <div className="mt-2 text-center font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-                radar online · awaiting ping
+
+              <div className="mt-8 border-t border-border pt-4 text-center">
+
+                <p className="mt-2 font-display text-lg font-bold uppercase tracking-wider text-hazard">
+                  Thank You for visiting my portfolio!
+                </p>
               </div>
             </div>
-          </Reveal>
-
-          {/* Form */}
-          <Reveal delay={0.1}>
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                setSent(true);
-              }}
-              className="dossier-corners relative grid h-full gap-4 border border-border bg-surface/60 p-6 backdrop-blur-sm"
-            >
-              <span className="corner-tl" />
-              <span className="corner-tr" />
-              <span className="corner-bl" />
-              <span className="corner-br" />
-
-              <div className="font-mono text-[10px] uppercase tracking-widest text-hazard">
-                ⟶ ENCRYPTED MESSAGE
-              </div>
-
-              <div className="grid gap-1.5">
-                <label className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-                  Callsign
-                </label>
-                <input
-                  required
-                  type="text"
-                  placeholder="Your name"
-                  className="border border-border bg-background/40 px-3 py-2.5 font-mono text-sm text-foreground outline-none transition-all placeholder:text-muted-foreground/60 focus:border-hazard focus:bg-background"
-                />
-              </div>
-
-              <div className="grid gap-1.5">
-                <label className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-                  Frequency (email)
-                </label>
-                <input
-                  required
-                  type="email"
-                  placeholder="you@domain.com"
-                  className="border border-border bg-background/40 px-3 py-2.5 font-mono text-sm text-foreground outline-none transition-all placeholder:text-muted-foreground/60 focus:border-hazard focus:bg-background"
-                />
-              </div>
-
-              <div className="grid gap-1.5">
-                <label className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-                  Transmission
-                </label>
-                <textarea
-                  required
-                  rows={6}
-                  placeholder="State your business..."
-                  className="resize-none border border-border bg-background/40 px-3 py-2.5 font-mono text-sm text-foreground outline-none transition-all placeholder:text-muted-foreground/60 focus:border-hazard focus:bg-background"
-                />
-              </div>
-
-              <button
-                type="submit"
-                disabled={sent}
-                className="group inline-flex items-center justify-center gap-2 border-2 border-hazard bg-hazard px-6 py-3 font-mono text-xs font-bold uppercase tracking-widest text-primary-foreground transition-all hover:glow-hazard-strong disabled:opacity-60"
-              >
-                <Send className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-                {sent ? "Signal Sent ✓" : "Transmit Signal"}
-              </button>
-
-              <p className="font-mono text-[9px] uppercase tracking-widest text-muted-foreground/60">
-                // demo form — wire to backend or email service to ship
-              </p>
-            </form>
           </Reveal>
         </div>
       </div>

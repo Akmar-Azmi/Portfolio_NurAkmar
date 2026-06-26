@@ -9,15 +9,14 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-10">
         <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
           <div className="flex items-center gap-3 font-mono text-xs uppercase tracking-widest text-muted-foreground">
-            <span className="grid h-8 w-8 place-items-center border border-hazard text-hazard">NA</span>
+            <span className="grid h-8 w-8 place-items-center border border-hazard text-hazard">AA</span>
             <span>
-              <span className="text-hazard">//</span> NUR_AKMAR · DOSSIER v2.6.0
+              <span className="text-hazard">//</span> AKMAR AZMI v2.6.0
             </span>
           </div>
 
           <div className="flex items-center gap-2">
             {[
-              { icon: Github, href: "#", label: "GitHub" },
               { icon: Linkedin, href: "https://www.linkedin.com/in/akmar-azmi217544183", label: "LinkedIn" },
               { icon: Mail, href: "mailto:nurakmarazmi@gmail.com", label: "Email" },
             ].map(({ icon: Icon, href, label }) => (

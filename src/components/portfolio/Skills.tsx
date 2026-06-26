@@ -1,39 +1,95 @@
 import { SectionHeader } from "./SectionHeader";
 import { Reveal } from "./Reveal";
+import {
+  SiJavascript,
+  SiTypescript,
+  SiPhp,
+  SiPython,
+  SiDart,
+  SiReact,
+  SiNextdotjs,
+  SiFlutter,
+  SiLaravel,
+  SiHtml5,
+  SiCss,
+  SiSupabase,
+  SiPostgresql,
+  SiMysql,
+  SiFirebase,
+  SiGithub,
+  SiGit,
+  SiDocker,
+  SiJira,
+  SiFigma,
+  SiGooglecloud,
+} from "react-icons/si";
+
+import {
+  Bot,
+  BrainCircuit,
+  Workflow,
+  Database,
+  Puzzle,
+  Sparkles,
+  Cloud,
+} from "lucide-react";
 
 const GROUPS = [
   {
     title: "Programming",
-    items: ["JavaScript", "TypeScript", "PHP", "Dart", "Python"],
+    items: [
+      { name: "JavaScript", icon: SiJavascript },
+      { name: "TypeScript", icon: SiTypescript },
+      { name: "PHP", icon: SiPhp },
+      { name: "Python", icon: SiPython },
+      { name: "Dart", icon: SiDart },
+    ],
   },
+
   {
     title: "Web & Mobile",
-    items: ["Next.js", "React", "Laravel", "Flutter", "React Native (Expo)", "HTML / CSS"],
+    items: [
+      { name: "React", icon: SiReact },
+      { name: "Next.js", icon: SiNextdotjs },
+      { name: "Laravel", icon: SiLaravel },
+      { name: "Flutter", icon: SiFlutter },
+      { name: "HTML5", icon: SiHtml5 },
+      { name: "CSS3", icon: SiCss },
+    ],
   },
+
   {
     title: "AI & Automation",
     items: [
-      "Agentic AI",
-      "n8n Workflows",
-      "LangChain",
-      "Azure OpenAI",
-      "Gemini API",
-      "RAG",
-      "Prompt Engineering",
-      "MCP",
+      { name: "Agentic AI", icon: Bot },
+      { name: "n8n", icon: Workflow },
+      { name: "Azure OpenAI", icon: Cloud },
+      { name: "Gemini API", icon: Sparkles },
+      { name: "RAG", icon: Database },
+      { name: "Prompt Engineering", icon: Sparkles },
     ],
   },
+
   {
-    title: "Data & Infra",
-    items: ["PostgreSQL", "Supabase", "MySQL", "Firebase", "REST APIs", "Cloudinary"],
+    title: "Database",
+    items: [
+      { name: "PostgreSQL", icon: SiPostgresql },
+      { name: "Supabase", icon: SiSupabase },
+      { name: "MySQL", icon: SiMysql },
+      { name: "Firebase", icon: SiFirebase },
+    ],
   },
+
   {
-    title: "Tooling",
-    items: ["Git", "GitHub", "Jira", "Figma", "Google Cloud", "Docker"],
-  },
-  {
-    title: "Methodology",
-    items: ["Agile SCRUM", "SDLC", "Functional Testing", "UI/UX Validation"],
+    title: "Tools",
+    items: [
+      { name: "Git", icon: SiGit },
+      { name: "GitHub", icon: SiGithub },
+      { name: "Docker", icon: SiDocker },
+      { name: "Jira", icon: SiJira },
+      { name: "Figma", icon: SiFigma },
+      { name: "Google Cloud", icon: SiGooglecloud },
+    ],
   },
 ];
 
@@ -42,8 +98,8 @@ export function Skills() {
     <section id="skills" className="relative px-4 py-24">
       <div className="mx-auto max-w-7xl">
         <SectionHeader
-          code="// 04 — ARSENAL"
-          title="Tech Arsenal"
+          code="// 04 — SKILLS"
+          title="Tech Skills"
           subtitle="Calibrated stack. Hover to engage."
         />
 
@@ -63,15 +119,22 @@ export function Skills() {
                     {String(i + 1).padStart(2, "0")}/{GROUPS.length}
                   </span>
                 </div>
-                <div className="flex flex-wrap gap-2">
-                  {g.items.map((s) => (
-                    <span
-                      key={s}
-                      className="cursor-default border border-border bg-background/60 px-2.5 py-1 font-mono text-[11px] text-muted-foreground transition-all hover:border-hazard hover:text-hazard hover:glow-hazard"
-                    >
-                      {s}
-                    </span>
-                  ))}
+                <div className="grid grid-cols-3 gap-3">
+                  {g.items.map((item) => {
+                    const Icon = item.icon;
+
+                    return (
+                      <div
+                        key={item.name}
+                        className="group flex flex-col items-center justify-center rounded border border-border bg-background/40 p-4 transition-all duration-300 hover:-translate-y-1 hover:border-hazard hover:bg-background/70"
+                      >
+                        <Icon className="mb-2 h-8 w-8 transition-transform duration-300 group-hover:scale-110" />
+                        <span className="text-center font-mono text-[10px] uppercase tracking-wide text-muted-foreground">
+                          {item.name}
+                        </span>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </Reveal>

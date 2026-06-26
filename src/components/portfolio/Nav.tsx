@@ -36,9 +36,9 @@ export function Nav() {
           }`}
         >
           <a href="#home" className="group flex items-center gap-2 font-display font-bold uppercase tracking-widest">
-            <span className="grid h-8 w-8 place-items-center border border-hazard text-hazard">NA</span>
+            <span className="grid h-8 w-8 place-items-center border border-hazard text-hazard">AA</span>
             <span className="hidden text-sm md:inline">
-              <span className="text-hazard">//</span> NUR_AKMAR
+              <span className="text-hazard">//</span> AKMAR AZMI
             </span>
           </a>
 
@@ -57,10 +57,10 @@ export function Nav() {
           </nav>
 
           <a
-            href="#contact"
+            href="public/NurAkmar_resume.pdf"
             className="hidden border border-hazard px-4 py-2 font-mono text-xs uppercase tracking-widest text-hazard transition-all hover:bg-hazard hover:text-primary-foreground hover:glow-hazard md:inline-block"
           >
-            Recruit Me
+            My Resume
           </a>
 
           <button
