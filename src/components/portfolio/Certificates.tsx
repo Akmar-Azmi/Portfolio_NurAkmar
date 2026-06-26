@@ -3,14 +3,14 @@ import { Reveal } from "./Reveal";
 import { Award, FileText, ExternalLink } from "lucide-react";
 
 const CERTS = [
-  { name: "Start Writing Prompts like a Pro", pdf: "public/prompt.pdf", org: "Google | Coursera", year: "2026" },
+  { name: "Start Writing Prompts like a Pro", pdf: "./prompt.pdf", org: "Google | Coursera", year: "2026" },
   { name: "The 12th International Exhibition of Research, Ideas, & Innovation on Creativity and Humanizing (12th ie-RIICH 2026)", pdf: "public/0008_NUR_AKMAR_BINTI_NOOR_AZMI_gold.pdf", org: "Gold Award | UPSI", year: "2026" },
-  { name: "User Experience Bootcamp",  pdf: "public/Nur Akmar Binti Noor Azmi _ User Experience Bootcamp.pdf", org: "K-Youth · UPSI", year: "2025" },
-  { name: "Digital Freelancing in Web Design & IT", pdf: "public/HVG006453_NUR_AKMAR_BINTI_NOOR_AZMI.pdf", org: "MOHE-MDEC GOT Malaysia", year: "2025" },
-  { name: "Python Programming Fundamentals", pdf: "public/Python Programming Fundamentalst.pdf", org: "Data Science Association", year: "2025" },
-  { name: "AI for MY Future", pdf: "public/AI For MY Future.pdf", org: "Microsoft", year: "2025" },
-  { name: "T.U.B Spark Unity Bootcamp", pdf: "public/T.U.B Spark Unity Bootcamp.pdf", org: "UPSI", year: "2025" },
-  { name: "CodeCraft AI Integration Challenge", pdf: "public/CodeCraft AI Integration Challenge (CCAIIC).pdf", org: "TARUMT", year: "2024" },
+  { name: "User Experience Bootcamp",  pdf: "./Nur Akmar Binti Noor Azmi _ User Experience Bootcamp.pdf", org: "K-Youth · UPSI", year: "2025" },
+  { name: "Digital Freelancing in Web Design & IT", pdf: "./HVG006453_NUR_AKMAR_BINTI_NOOR_AZMI.pdf", org: "MOHE-MDEC GOT Malaysia", year: "2025" },
+  { name: "Python Programming Fundamentals", pdf: "./Python Programming Fundamentalst.pdf", org: "Data Science Association", year: "2025" },
+  { name: "AI for MY Future", pdf: "./AI For MY Future.pdf", org: "Microsoft", year: "2025" },
+  { name: "T.U.B Spark Unity Bootcamp", pdf: "./T.U.B Spark Unity Bootcamp.pdf", org: "UPSI", year: "2025" },
+  { name: "CodeCraft AI Integration Challenge", pdf: "./CodeCraft AI Integration Challenge (CCAIIC).pdf", org: "TARUMT", year: "2024" },
 ];
 
 export function Certificates() {

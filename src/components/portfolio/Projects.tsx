@@ -3,12 +3,15 @@ import { Reveal } from "./Reveal";
 import { Github, ExternalLink, ImageIcon } from "lucide-react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { X } from "lucide-react";
-
+import medibond from "../Images/medibond.png";
+import agentic from "../Images/Agentic.png";
+import mySanding from "../Images/mySanding.png";
+import recipedia from "../Images/recipedia.jpg";
 const PROJECTS = [
   {
     code: "P-01",
     name: "MediBond: A Digital Assistant for Elderly Medication Support With Caregiver Integration",
-    image: "src/components/images/medibond.png",
+    image: medibond,
     tag: "FYP • Gold Award • ie-RIICH 2026",
     description:
       "Award-winning Final Year Project (FYP) developed to improve medication adherence among elderly users through caregiver integration. Features role-based authentication, real-time medication reminders, push notifications, and remote caregiver monitoring.",
@@ -25,7 +28,7 @@ const PROJECTS = [
   {
     code: "P-02",
     name: "Night Agent DataOps (NADO)",
-      image: "src/components/images/Agentic.png",
+      image: agentic,
     tag: "Telekom Malaysia · Internship",
     description:
       "Agentic AI workflow on n8n that monitors ETL pipelines, analyses execution logs with Azure OpenAI, and auto-reruns failed jobs. Paired with a Next.js dashboard for KPIs, history and AI-generated insights.",
@@ -36,7 +39,7 @@ const PROJECTS = [
   {
     code: "P-03",
     name: "MySanding Bridal",
-    image: "src/components/images/mySanding.png",
+    image: mySanding,
     tag: "Real Client · Agile SCRUM",
     description:
       "Booking and service-management website for a bridal studio, built in an Agile SCRUM cadence with sprint planning, reviews and Jira-tracked defects.",
@@ -48,7 +51,7 @@ const PROJECTS = [
   {
     code: "P-04",
     name: "Recipedia",
-    image: "src/components/images/recipedia.jpg",
+    image: recipedia,
     tag: "Mobile · Community Recipes",
     description:
       "Cross-platform recipe app with CRUD for recipes, favourites, comments and likes — a small social layer for home cooks.",
