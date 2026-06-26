@@ -1,8 +1,7 @@
 import { Download, Mail, FolderOpen, Crosshair, Radio } from "lucide-react";
 import { TypingRoles } from "./TypingRoles";
 import { Reveal } from "./Reveal";
-import profileImage from "../Images/profle.png";
-import resumePDF from "../Images/NurAkmar_resume.pdf";
+import profileImage from "../Images/profile.jpg";
 
 export function Hero() {
   return (
@@ -68,7 +67,7 @@ export function Hero() {
                 <span className="absolute inset-0 -translate-x-full bg-foreground/10 transition-transform duration-500 group-hover:translate-x-0" />
               </a>
               <a
-                href={resumePDF}
+                href="/NurAkmar_resume.pdf"
                 download
                 className="inline-flex items-center gap-2 border border-border bg-surface/60 px-6 py-3 font-mono text-xs font-bold uppercase tracking-widest text-foreground transition-all hover:border-hazard hover:text-hazard"
               >
