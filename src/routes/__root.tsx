@@ -77,22 +77,31 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Nur Akmar — AI Engineer & Software Developer" },
+      {
+        name: "description",
+        content:
+          "Most Wanted dossier of Nur Akmar Noor Azmi — AI Engineer, Software Engineer, and Agentic AI developer building intelligent automation systems.",
+      },
+      { name: "author", content: "Nur Akmar Noor Azmi" },
+      { property: "og:title", content: "Nur Akmar — AI Engineer & Software Developer" },
+      {
+        property: "og:description",
+        content:
+          "Agentic AI, data automation, and full-stack engineering. Enter the dossier.",
+      },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
+      { rel: "stylesheet", href: appCss },
       {
         rel: "stylesheet",
-        href: appCss,
+        href: "https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap",
       },
     ],
   }),
+
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
