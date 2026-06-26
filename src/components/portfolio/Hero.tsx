@@ -105,7 +105,7 @@ export function Hero() {
         {/* Right: Wanted card */}
         <div className="relative flex items-center justify-center">
           <Reveal delay={0.2}>
-            <div className="dossier-corners concrete-tex relative w-full max-w-[130] overflow-hidden border border-hazard/30 p-5 shadow-2xl">
+            <div className="dossier-corners concrete-tex relative w-full max-w-[520px] overflow-hidden border border-hazard/30 p-5 shadow-2xl">
               <span className="corner-tl" />
               <span className="corner-tr" />
               <span className="corner-bl" />
@@ -119,9 +119,9 @@ export function Hero() {
               </div>
 
               {/* Photo placeholder */}
-              <div className="relative aspect-4/5 w-full overflow-hidden border border-border bg-background">
+              <div className="relative aspect-[4/5] w-full overflow-hidden border border-border bg-background">
                 {/* Rotating search light */}
-                <div className="pointer-events-none absolute left-1/2 top-0 h-[140%] w-[60%] -translate-x-1/2 search-light bg-linear-to-b from-hazard/30 via-hazard/10 to-transparent blur-xl" />
+                <div className="pointer-events-none absolute left-1/2 top-0 h-[140%] w-[60%] -translate-x-1/2 search-light bg-gradient-to-b from-hazard/30 via-hazard/10 to-transparent blur-xl" />
 
                 {/* Portrait */}
                 <img
@@ -175,7 +175,7 @@ export function Hero() {
             <div className="absolute inset-0 rounded-full border border-hazard/30" />
             <div className="absolute inset-4 rounded-full border border-hazard/20" />
             <div className="absolute inset-8 rounded-full border border-hazard/10" />
-            <div className="absolute left-1/2 top-1/2 h-full w-px origin-top -translate-x-1/2 bg-linear-to-b from-hazard via-hazard/40 to-transparent radar-sweep" />
+            <div className="absolute left-1/2 top-1/2 h-full w-px origin-top -translate-x-1/2 bg-gradient-to-b from-hazard via-hazard/40 to-transparent radar-sweep" />
           </div>
         </div>
       </div>
@@ -183,7 +183,7 @@ export function Hero() {
       {/* Scroll hint */}
       <div className="absolute bottom-0.5 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 font-mono text-[12px] uppercase tracking-widest text-muted-foreground md:flex">
         <span>scroll Subject</span>
-        <div className="h-8 w-px bg-linear-to-b from-hazard to-transparent" />
+        <div className="h-8 w-px bg-gradient-to-b from-hazard to-transparent" />
       </div>
     </section>
   );

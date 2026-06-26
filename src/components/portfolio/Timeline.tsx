@@ -41,7 +41,7 @@ export function Timeline() {
 
         <div className="relative mx-auto max-w-3xl">
           {/* Vertical rail */}
-          <div className="absolute bottom-0 left-4 top-0 w-px bg-linear-to-b from-hazard via-hazard/30 to-transparent md:left-1/2" />
+          <div className="absolute bottom-0 left-4 top-0 w-px bg-gradient-to-b from-hazard via-hazard/30 to-transparent md:left-1/2" />
 
           <ol className="space-y-12">
             {ENTRIES.map((e, i) => {

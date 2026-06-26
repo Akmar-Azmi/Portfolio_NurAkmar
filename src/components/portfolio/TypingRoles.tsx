@@ -38,7 +38,7 @@ export function TypingRoles() {
   return (
     <span className="font-mono text-hazard">
       {text}
-      <span className="ml-0.5 inline-block h-[1em] w-[0.5] translate-y-[0.5] bg-hazard caret-blink" />
+      <span className="ml-0.5 inline-block h-[1em] w-[2px] translate-y-[2px] bg-hazard caret-blink" />
     </span>
   );
 }

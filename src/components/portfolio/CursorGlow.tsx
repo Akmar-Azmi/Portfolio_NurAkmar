@@ -18,7 +18,7 @@ export function CursorGlow() {
   return (
     <div
       aria-hidden
-      className="pointer-events-none fixed z-60 h-[100] w-[100] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-60 mix-blend-screen"
+      className="pointer-events-none fixed z-[60] h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-60 mix-blend-screen"
       style={{
         left: pos.x,
         top: pos.y,
