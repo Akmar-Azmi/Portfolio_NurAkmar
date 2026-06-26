@@ -3,7 +3,7 @@ import { Reveal } from "./Reveal";
 import { Award, FileText, ExternalLink } from "lucide-react";
 
 const CERTS = [
-  { name: "Start Writing Prompts like a Pro", pdf: "./prompt.pdf", org: "Google | Coursera", year: "2026" },
+  { name: "Start Writing Prompts like a Pro", pdf: "/prompt.pdf", org: "Google | Coursera", year: "2026" },
   { name: "The 12th International Exhibition of Research, Ideas, & Innovation on Creativity and Humanizing (12th ie-RIICH 2026)", pdf: "public/0008_NUR_AKMAR_BINTI_NOOR_AZMI_gold.pdf", org: "Gold Award | UPSI", year: "2026" },
   { name: "User Experience Bootcamp",  pdf: "./Nur Akmar Binti Noor Azmi _ User Experience Bootcamp.pdf", org: "K-Youth · UPSI", year: "2025" },
   { name: "Digital Freelancing in Web Design & IT", pdf: "./HVG006453_NUR_AKMAR_BINTI_NOOR_AZMI.pdf", org: "MOHE-MDEC GOT Malaysia", year: "2025" },

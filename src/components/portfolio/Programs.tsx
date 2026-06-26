@@ -1,11 +1,19 @@
 import { SectionHeader } from "./SectionHeader";
 import { Reveal } from "./Reveal";
 import { Camera } from "lucide-react";
+import ieriich from "../Images/ieriich.jpg";
+import kyouth from "../Images/kyouth.jpg";
+import mdec from "../Images/mdec.jpg";
+import openclaw from "../Images/openclaw.jpg";
+import unity from "../Images/unity.jpg";
+import codecraft from "../Images/codecraft.jpg";
+import ux from "../Images/ux.jpg";
+import { useState } from "react";
 
 const PROGRAMS = [
   {
     name: "12th ie-RIICH",
-    image: "src/components/images/ieriich.jpg",
+    image: ieriich,
     year: "2026",
     place: "UPSI",
     body: "International Exhibition of Research, Ideas & Innovation. Earned \"Gold Award\" for MediBond.",
@@ -13,7 +21,7 @@ const PROGRAMS = [
   },
   {
     name: "UX Bootcamp",
-    image: "src/components/images/kyouth.jpg",
+    image: ux,
     year: "2025",
     place: "K-Youth · UPSI",
     body: "User Experience Bootcamp under the K-Youth Development Programme Track B.",
@@ -21,7 +29,7 @@ const PROGRAMS = [
   },
   {
     name: "MDEC GOT",
-    image: "src/components/images/mdec.jpg",
+    image: mdec,
     year: "2025",
     place: "MOHE × MDEC",
     body: "Digital Freelancing in Web Design & IT — Global Outsourcing Talent track.",
@@ -29,7 +37,7 @@ const PROGRAMS = [
   },
   {
     name: " OpenClaw for Web3 Workshop",
-    image: "src/components/images/openclaw.jpg",
+    image: openclaw,
     year: "2026",
     place: "APU / APIIT",
     body: "Setting up OpenClaw using DigitalOcean, configuring SSH keys, creating a telegram bot and integrating Gemini as LLM backend. ",
@@ -37,7 +45,7 @@ const PROGRAMS = [
   },
   {
     name: "T.U.B Spark",
-    image: "src/components/images/unity.jpg",
+    image: unity,
     year: "2025",
     place: "Unity · UPSI",
     body: "Unity bootcamp covering interactive 3D and game-engine fundamentals.",
@@ -45,7 +53,7 @@ const PROGRAMS = [
   },
   {
     name: "CCAIIC",
-    image: "src/components/images/codecraft.jpg",
+    image: codecraft,
     year: "2024",
     place: "TARUMT",
     body: "CodeCraft AI Integration Challenge — collegiate AI-build hackathon.",
